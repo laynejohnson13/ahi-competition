@@ -9,3 +9,13 @@ Daghistani, T., AlGhamdi, H., Alshammari, R. *et al.* Predictors of outpatientsâ
 - time/date of appointment
 - gender
 - age
+
+
+Molfenter T. (2013). Reducing appointment no-shows: going from theory to practice.  *Substance use & misuse* ,  *48* (9), 743â€“749. https://doi.org/10.3109/10826084.2013.787098
+
+Major Factors:
+
+- alcohol dependency
+- drug dependency
+- environmental conditions
+- wait times
