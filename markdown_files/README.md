@@ -7,3 +7,6 @@ Factors found contributing to no-show rate:
 - time/date of appointment
 - gender
 - age
+- alcohol/drug dependency
+- wait times
+- environment
