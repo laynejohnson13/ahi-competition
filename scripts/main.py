@@ -42,3 +42,25 @@ renamed_external = external.rename(columns={'alcoolism': 'alcoholism', 'hiperten
 
 #exporting cleaned csv
 renamed_external.to_csv("data/cleaned_external.csv")
+
+
+
+
+
+
+###merging data 
+
+ext = pd.read_csv("data/cleaned_external.csv")
+ext
+
+ext.loc[:,"gender"]
+
+original.loc[:,'patient_gender']
+
+
+combined_df = ext.merge(original, how='left', left_on='gender', right_on='patient_gender')
+combined_df = pd.merge(ext, original, how='left', left_on='gender', right_on='patient_gender')
+
+combined_df.shape
+
+combined_df.to_csv('enhanced_data.csv')
