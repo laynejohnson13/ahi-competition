@@ -22,7 +22,7 @@ print('\nResult dataframe :\n', age)
 
 ###importing 
 
-external = pd.read_csv("data/external_data.csv")
+external = pd.read_csv("data/external.csv")
 external 
 
 ##Viewing data
@@ -38,10 +38,10 @@ external.columns = external.columns.str.replace('[^A-Za-z0-9]+', '_')
 external.columns = external.columns.str.lower()
 
 ##renaming external columns 
-renamed_external = external.rename(columns={'alcoolism': 'alcoholism', 'hipertension': 'hypertension'})
+renamed_external = external.rename(columns={'alcoolism': 'alcoholism', 'hipertension': 'hypertension', 'gender': 'patient_gender'})
 
 #exporting cleaned csv
-renamed_external.to_csv("data/cleaned_external.csv")
+renamed_external.to_csv("data/clean_external.csv")
 
 
 
@@ -50,7 +50,7 @@ renamed_external.to_csv("data/cleaned_external.csv")
 
 ###merging data 
 
-ext = pd.read_csv("data/cleaned_external.csv")
+ext = pd.read_csv("data/clean_external.csv")
 ext
 
 ext.loc[:,"gender"]
@@ -58,9 +58,28 @@ ext.loc[:,"gender"]
 original.loc[:,'patient_gender']
 
 
-combined_df = ext.merge(original, how='left', left_on='gender', right_on='patient_gender')
-combined_df = pd.merge(ext, original, how='left', left_on='gender', right_on='patient_gender')
+small_ext = ext[[
+    'age',
+    'patient_gender',
+    'status',
+    'diabetes',
+    'alcoholism',
+    'hypertension'
+]]
 
-combined_df.shape
+small_original = original[[
+    'id',
+    'practice_id',
+    'appointment_type',
+    'patient_gender',
+    'zipcode',
+    'weather_conditions'
+]]
 
-combined_df.to_csv('enhanced_data.csv')
+
+
+merged = pd.merge(small_ext, small_original)
+
+merged.to_csv('master.csv')
+
+###receiving zsh: killed python
