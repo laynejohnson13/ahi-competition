@@ -10,7 +10,6 @@ Daghistani, T., AlGhamdi, H., Alshammari, R. *et al.* Predictors of outpatients�
 - gender
 - age
 
-
 Molfenter T. (2013). Reducing appointment no-shows: going from theory to practice.  *Substance use & misuse* ,  *48* (9), 743–749. https://doi.org/10.3109/10826084.2013.787098
 
 Major Factors:
@@ -19,3 +18,13 @@ Major Factors:
 - drug dependency
 - environmental conditions
 - wait times
+
+
+
+Carreras-García, D., Delgado-Gómez, D., Llorente-Fernández, F., & Arribas-Gil, A. (2020). Patient No-Show Prediction: A Systematic Literature Review.  *Entropy (Basel, Switzerland)* ,  *22* (6), 675. https://doi.org/10.3390/e22060675
+
+Major Factors:
+
+- insurance type
+- access to phone
+- religion
